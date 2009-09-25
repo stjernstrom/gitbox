@@ -1,0 +1,16 @@
+<% form_for @ssh_key do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.text_field :data %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

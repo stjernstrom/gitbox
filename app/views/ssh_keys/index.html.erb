@@ -1,0 +1,21 @@
+<% title "Ssh Keys" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>User</th>
+    <th>Data</th>
+  </tr>
+  <% for ssh_key in @ssh_keys %>
+    <tr>
+      <td><%=h ssh_key.title %></td>
+      <td><%=h ssh_key.user_id %></td>
+      <td><%=h ssh_key.data %></td>
+      <td><%= link_to "Show", ssh_key %></td>
+      <td><%= link_to "Edit", edit_ssh_key_path(ssh_key) %></td>
+      <td><%= link_to "Destroy", ssh_key, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Ssh Key", new_ssh_key_path %></p>

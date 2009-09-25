@@ -1,0 +1,20 @@
+<% title "Ssh Key" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @ssh_key.title %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%=h @ssh_key.user_id %>
+</p>
+<p>
+  <strong>Data:</strong>
+  <%=h @ssh_key.data %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_ssh_key_path(@ssh_key) %> |
+  <%= link_to "Destroy", @ssh_key, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", ssh_keys_path %>
+</p>
