@@ -1,8 +1,15 @@
 require 'test_helper'
 
 class WelcomeControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  context "Welcome controller index action" do
+    
+    setup do
+      get :index
+    end
+    
+    should_require_authneticated_user
+
   end
+
 end

@@ -36,3 +36,15 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+def should_require_authenticated_user
+
+  should "redirect unauthenticated users to login page" do
+    assert_response :redirect, login_url
+  end
+  
+  should "set flash with authentication needed message" do
+    assert_equal flash[:error], "You must first log in or sign up before accessing this page."
+  end
+  
+end
