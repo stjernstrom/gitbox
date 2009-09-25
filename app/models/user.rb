@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  has_many :ssh_keys
+
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :username, :email, :password, :password_confirmation
   

@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+
+  should_have_many :ssh_keys
+
   def new_user(attributes = {})
     attributes[:username] ||= 'foo'
     attributes[:email] ||= 'foo@example.com'
