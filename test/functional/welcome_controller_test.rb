@@ -8,7 +8,7 @@ class WelcomeControllerTest < ActionController::TestCase
       get :index
     end
     
-    should_require_authneticated_user
+    should_require_authenticated_user
 
   end
 
